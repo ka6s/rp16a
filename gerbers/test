@@ -1,0 +1,7 @@
+BAS16J
+
+Vreverse 100V
+Ireverse 0.5uA at V4=80V
+TreverseRecovery = 4ns
+
+

@@ -1,0 +1,172 @@
+
+(rules PCB rp_adapter
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 668)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 500.2 (type default_Power))
+    (clear 50.0 (type smd_smd))
+    (clear 500.2 (type smd_Power))
+    (clear 500.2 (type "kicad_default"_Power))
+    (clear 500.2 (type Power_Power))
+    (clear 500.2 (type Power_RF))
+    (clear 500.2 (type Power_RF2))
+  )
+  (padstack "Via[0-3]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_600:400_um" "Via[0-3]_600:400_um" default
+  )
+  (via 
+    "Via[0-3]_600:400_um-kicad_default" "Via[0-3]_600:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_600:400_um-Power" "Via[0-3]_600:400_um" Power
+  )
+  (via 
+    "Via[0-3]_600:400_um-RF" "Via[0-3]_600:400_um" RF
+  )
+  (via 
+    "Via[0-3]_600:400_um-RF2" "Via[0-3]_600:400_um" RF2
+  )
+  (via_rule
+    default "Via[0-3]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_600:400_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-3]_600:400_um-Power"
+  )
+  (via_rule
+    RF "Via[0-3]_600:400_um-RF"
+  )
+  (via_rule
+    RF2 "Via[0-3]_600:400_um-RF2"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(J3-Pad1)" "/extern_conn/DASH" "/extern_conn/PTT_IN" "/extern_conn/DOT" "Net-(L4-Pad1)" "Net-(R17-Pad1)" "Net-(D1-Pad2)"
+    "Net-(D2-Pad2)" "Net-(C3-Pad1)" /BCLK /ADCDAT /DACDAT /LRCLK /SDAT /SCLK
+    "/I2C to SPI/SWR_F" "/I2C to SPI/SWR_R" "Net-(J6-Pad1)" "/I2C to SPI/SPI_SDO" "/I2C to SPI/SPI_RSTB" "/I2C to SPI/SPI_TSTB" "/PTT_OUT" "/extern_conn/3P3V_AUD"
+    "Net-(C34-Pad2)" "Net-(C34-Pad1)" "Net-(C36-Pad1)" "Net-(C36-Pad2)" "Net-(J5-Pad1)" "Net-(P14-Pad1)" "Net-(P15-Pad1)" "/I2C to SPI/SDAT"
+    "Net-(R15-Pad1)" "Net-(R15-Pad2)" "Net-(R16-Pad1)" "Net-(R16-Pad2)" "Net-(R19-Pad1)" "Net-(R20-Pad1)" "Net-(R21-Pad2)" "Net-(R22-Pad1)"
+    "/I2C to SPI/SPI_SCK" "Net-(MT1-Pad1)" "Net-(P1-Pad10)" "Net-(P1-Pad19)" "Net-(P1-Pad20)" "Net-(P1-Pad21)" "Net-(P1-Pad22)" "Net-(P1-Pad23)"
+    "Net-(P1-Pad24)" "Net-(P2-Pad2)" "Net-(P2-Pad3)" "Net-(P2-Pad4)" "Net-(P2-Pad5)" "Net-(P2-Pad6)" "Net-(P2-Pad7)" "Net-(P2-Pad8)"
+    "Net-(P2-Pad11)" "Net-(P2-Pad12)" "Net-(P2-Pad15)" "Net-(P2-Pad16)" "Net-(P2-Pad17)" "Net-(P2-Pad18)" "Net-(P2-Pad19)" "Net-(P2-Pad20)"
+    "Net-(P2-Pad23)" "Net-(P2-Pad24)" "Net-(T1-Pad2)" "Net-(T2-Pad2)" "Net-(T3-Pad2)" "Net-(T3-Pad5)" "Net-(U3-Pad2)" "Net-(U3-Pad3)"
+    "Net-(U3-Pad4)" "Net-(U3-Pad5)" "Net-(U3-Pad6)" "Net-(U3-Pad9)" "Net-(U3-Pad10)" "Net-(U3-Pad11)" "Net-(U3-Pad13)" "Net-(U3-Pad14)"
+    "Net-(U3-Pad18)" "Net-(U3-Pad19)" "Net-(U3-Pad20)" "Net-(U3-Pad21)" "Net-(U3-Pad22)" "Net-(U3-Pad23)" "Net-(U3-Pad24)" "Net-(U3-Pad25)"
+    "Net-(U3-Pad26)" "Net-(U3-Pad27)" "Net-(U3-Pad32)" "Net-(U3-Pad33)" "Net-(U3-Pad37)" "Net-(U3-Pad38)" "Net-(U3-Pad40)" "Net-(U3-Pad41)"
+    "Net-(U3-Pad42)" "Net-(U3-Pad43)" "Net-(U3-Pad44)" "Net-(U3-Pad45)" "Net-(U3-Pad46)" "Net-(U3-Pad47)" "Net-(U3-Pad48)" "Net-(U3-Pad49)"
+    "Net-(U3-Pad50)" "Net-(U3-Pad51)" "Net-(U3-Pad52)" "Net-(U3-Pad53)" "Net-(U3-Pad55)" "Net-(U3-Pad56)" "/I2C to SPI/RESET" "/I2C to SPI/SAR_BYPASS"
+    "/I2C to SPI/VCCD" "/I2C to SPI/VDDD" "/I2C to SPI/VTARG" "/I2C to SPI/SWDCLK" "/I2C to SPI/SWDIO" "/I2C to SPI/UART_TX" "Net-(U2-Pad5)" "Net-(U2-Pad6)"
+    "Net-(U2-Pad7)" "Net-(U2-Pad9)" "Net-(U2-Pad10)" "Net-(U2-Pad11)" "Net-(U2-Pad12)" "Net-(U2-Pad15)" "Net-(U2-Pad16)" "Net-(U2-Pad17)"
+    "Net-(U2-Pad18)" "Net-(U2-Pad20)" "Net-(U2-Pad21)" "Net-(U2-Pad22)" "Net-(U2-Pad23)" "Net-(U2-Pad24)" "Net-(U2-Pad25)" "Net-(U2-Pad26)"
+    "Net-(U2-Pad27)" "Net-(U2-Pad39)" "Net-(U2-Pad40)" "Net-(U2-Pad41)" "Net-(U2-Pad42)" "Net-(U2-Pad43)" "/I2C to SPI/VDDA" "Net-(CODEC1-Pad5)"
+    "Net-(CODEC1-Pad10)" "Net-(CODEC1-Pad11)" "Net-(R6-Pad2)" "Net-(J14-PadMP)" "/extern_conn/db20_n" "/extern_conn/db10_n" "/extern_conn/preamp_n" "Net-(J1-Pad2)"
+    "Net-(J1-Pad3)" "Net-(J1-Pad4)" "Net-(J1-Pad6)" "Net-(J4-Pad1)" "Net-(J13-Pad1)" "Net-(J13-Pad2)" "Net-(J13-Pad3)" "Net-(J13-Pad4)"
+    "Net-(K1-Pad2)" "Net-(K1-Pad6)" "Net-(K1-Pad5)" "Net-(K1-Pad4)" "Net-(K1-Pad3)" "Net-(K2-Pad2)" "Net-(K2-Pad4)" "Net-(K2-Pad5)"
+    "Net-(K3-Pad2)" "Net-(K3-Pad3)" "Net-(K3-Pad4)" /preamp /db10 /h1 /h2 /h3
+    "/I2C to SPI/ant2" "/I2C to SPI/ant3" "Net-(R24-Pad2)" "Net-(U1-Pad9)" "/I2C to SPI/ant1"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    "/I2C to SPI/RP_3.3V" "/lna/5V_LNA" "/mini_amp/AMP12V" "/ps/RP_5V" Earth GNDREF GNDPWR "/I2C to SPI/+12V"
+    +12V
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 2000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class RF
+    (clearance_class RF)
+    (via_rule RF)
+    (rule
+      (width 1500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class RF2
+    (clearance_class RF2)
+    (via_rule RF2)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

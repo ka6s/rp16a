@@ -1,0 +1,255 @@
+EESchema Schematic File Version 4
+LIBS:rp_adapter-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 8000 6800 0    60   ~ 0
+RP Adapter Power Supply\n(C) 2016 Steven D Wilson KA6S\n
+Text HLabel 7300 1350 2    60   UnSpc ~ 0
+5V_LNA
+Text HLabel 3150 2250 2    60   UnSpc ~ 0
+RP_5V
+Text HLabel 2300 2850 2    60   UnSpc ~ 0
+12V_MINIAMP
+Text Label 6250 1350 0    60   ~ 0
+5V_LNA
+Wire Wire Line
+	5350 1350 7300 1350
+$Comp
+L rp_adapter-rescue:INDUCTOR L1
+U 1 1 5F7BFF70
+P 4150 1350
+F 0 "L1" V 4100 1350 50  0000 C CNN
+F 1 "FB" V 4250 1350 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 1350 50  0001 C CNN
+F 3 "" H 4150 1350 50  0000 C CNN
+	1    4150 1350
+	0    -1   -1   0   
+$EndComp
+Text HLabel 4500 1050 0    60   UnSpc ~ 0
+12V_MINIAMP
+Wire Wire Line
+	4500 1050 4750 1050
+Wire Wire Line
+	2850 2250 2850 1750
+Wire Wire Line
+	2850 1350 3850 1350
+Wire Wire Line
+	2850 2250 3150 2250
+$Comp
+L Device:C C2
+U 1 1 5F7C1F13
+P 5350 1500
+F 0 "C2" H 5465 1546 50  0000 L CNN
+F 1 "0.001uF" H 5465 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5388 1350 50  0001 C CNN
+F 3 "~" H 5350 1500 50  0001 C CNN
+	1    5350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F7C41D3
+P 4850 1500
+F 0 "C1" H 4965 1546 50  0000 L CNN
+F 1 "0.1 uF" H 4965 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4888 1350 50  0001 C CNN
+F 3 "~" H 4850 1500 50  0001 C CNN
+	1    4850 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1350 4850 1350
+Wire Wire Line
+	4850 1350 5350 1350
+Connection ~ 4850 1350
+Connection ~ 5350 1350
+$Comp
+L power:GND #PWR0103
+U 1 1 5F7C557B
+P 4850 1650
+F 0 "#PWR0103" H 4850 1400 50  0001 C CNN
+F 1 "GND" H 4855 1477 50  0000 C CNN
+F 2 "" H 4850 1650 50  0001 C CNN
+F 3 "" H 4850 1650 50  0001 C CNN
+	1    4850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F7C5AF6
+P 5350 1650
+F 0 "#PWR0104" H 5350 1400 50  0001 C CNN
+F 1 "GND" H 5355 1477 50  0000 C CNN
+F 2 "" H 5350 1650 50  0001 C CNN
+F 3 "" H 5350 1650 50  0001 C CNN
+	1    5350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_MountingPin J14
+U 1 1 60DA66AA
+P 1100 2950
+F 0 "J14" H 1157 3267 50  0000 C CNN
+F 1 "Barrel_Jack_MountingPin" H 1157 3176 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1150 2910 50  0001 C CNN
+F 3 "~" H 1150 2910 50  0001 C CNN
+	1    1100 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2850 1950 2850
+$Comp
+L power:GND #PWR03
+U 1 1 60DAE116
+P 1700 3450
+F 0 "#PWR03" H 1700 3200 50  0001 C CNN
+F 1 "GND" H 1705 3277 50  0000 C CNN
+F 2 "" H 1700 3450 50  0001 C CNN
+F 3 "" H 1700 3450 50  0001 C CNN
+	1    1700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3050 1700 3050
+$Comp
+L Device:C C14
+U 1 1 60DAE3B7
+P 1950 3000
+F 0 "C14" H 2065 3046 50  0000 L CNN
+F 1 "10uF" H 2065 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1988 2850 50  0001 C CNN
+F 3 "~" H 1950 3000 50  0001 C CNN
+F 4 "80-C1206C106Z4VACTU" H 1950 3000 50  0001 C CNN "Mousr Part Number"
+	1    1950 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 2850
+Wire Wire Line
+	1950 2850 1600 2850
+Wire Wire Line
+	1700 3050 1700 3150
+Wire Wire Line
+	1950 3150 1700 3150
+Connection ~ 1700 3150
+Wire Wire Line
+	1700 3150 1700 3450
+$Comp
+L Regulator_Linear:L7805 U4
+U 1 1 60DB0D5E
+P 2050 1750
+F 0 "U4" H 2050 1992 50  0000 C CNN
+F 1 "LM7805" H 2050 1901 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2075 1600 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2050 1700 50  0001 C CNN
+F 4 "511-LD1085V50" H 2050 1750 50  0001 C CNN "Mouser Part Number"
+	1    2050 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1750 1750 1750
+Wire Wire Line
+	2350 1750 2500 1750
+Connection ~ 2850 1750
+Wire Wire Line
+	2850 1750 2850 1350
+$Comp
+L Device:C C15
+U 1 1 60DB2831
+P 2500 1900
+F 0 "C15" H 2615 1946 50  0000 L CNN
+F 1 "10uF" H 2615 1855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2538 1750 50  0001 C CNN
+F 3 "~" H 2500 1900 50  0001 C CNN
+F 4 "80-C1206C106Z4VACTU" H 2500 1900 50  0001 C CNN "Mouser Part Number"
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 1750
+Wire Wire Line
+	2500 1750 2850 1750
+$Comp
+L power:GND #PWR04
+U 1 1 60DB309B
+P 2050 2050
+F 0 "#PWR04" H 2050 1800 50  0001 C CNN
+F 1 "GND" H 2055 1877 50  0000 C CNN
+F 2 "" H 2050 2050 50  0001 C CNN
+F 3 "" H 2050 2050 50  0001 C CNN
+	1    2050 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60DB3848
+P 2500 2050
+F 0 "#PWR05" H 2500 1800 50  0001 C CNN
+F 1 "GND" H 2505 1877 50  0000 C CNN
+F 2 "" H 2500 2050 50  0001 C CNN
+F 3 "" H 2500 2050 50  0001 C CNN
+	1    2500 2050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1100 3250
+Wire Wire Line
+	1600 1750 1600 2850
+Connection ~ 1600 2850
+Wire Wire Line
+	1600 2850 1400 2850
+$Comp
+L Mechanical:Heatsink HS1
+U 1 1 618850D3
+P 2750 1150
+F 0 "HS1" H 2892 1271 50  0000 L CNN
+F 1 "Heatsink" H 2892 1180 50  0000 L CNN
+F 2 "Heatsink:Heatsink_Fischer_SK129-STS_42x25mm_2xDrill2.5mm" H 2762 1150 50  0001 C CNN
+F 3 "~" H 2762 1150 50  0001 C CNN
+	1    2750 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM1085-3.3 U8
+U 1 1 61887A74
+P 2050 1000
+F 0 "U8" H 2050 1242 50  0000 C CNN
+F 1 "LM1085-5" H 2050 1151 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2050 1250 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1085.pdf" H 2050 1000 50  0001 C CNN
+F 4 "511-LD1085V50" H 2050 1000 50  0001 C CNN "Mouser Part Number"
+	1    2050 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1750 1600 1000
+Wire Wire Line
+	1600 1000 1750 1000
+Connection ~ 1600 1750
+Wire Wire Line
+	2350 1000 2500 1000
+Wire Wire Line
+	2500 1000 2500 1750
+$Comp
+L power:GND #PWR0131
+U 1 1 618897D3
+P 2200 1300
+F 0 "#PWR0131" H 2200 1050 50  0001 C CNN
+F 1 "GND" H 2205 1127 50  0000 C CNN
+F 2 "" H 2200 1300 50  0001 C CNN
+F 3 "" H 2200 1300 50  0001 C CNN
+	1    2200 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1300 2050 1300
+$EndSCHEMATC

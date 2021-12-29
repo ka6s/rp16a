@@ -1,0 +1,570 @@
+EESchema Schematic File Version 4
+LIBS:rp_adapter-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 9900 7050 2    60   ~ 12
+Red Pitaya SDR Interface 16A V1.2\n(C) 2021 Steven D Wilson KA6S\nFeatures Preamp with 10/20db atten & bypass\n1W TX Amp, SPI CTL for Alex, TR SW CTL\n
+Wire Wire Line
+	4250 3600 5100 3600
+Wire Wire Line
+	6000 4950 6500 4950
+$Sheet
+S 3150 1300 750  1250
+U 57796233
+F0 "lna" 60
+F1 "lna.sch" 60
+F2 "GND_LNA" U L 3150 1750 60 
+F3 "5V_LNA" U L 3150 1500 60 
+F4 "preamp_n" I R 3900 2050 60 
+F5 "db10_n" I R 3900 1600 60 
+F6 "db20_n" I R 3900 1900 60 
+$EndSheet
+$Sheet
+S 3100 3200 950  1500
+U 57798DF1
+F0 "mini_amp" 60
+F1 "mini_amp.sch" 60
+F2 "12V_MINIAMP" U L 3100 3600 60 
+$EndSheet
+Wire Wire Line
+	4450 5750 4450 4000
+Wire Wire Line
+	4450 4000 5350 4000
+Wire Wire Line
+	4600 5650 4600 4100
+Wire Wire Line
+	4600 4100 5350 4100
+$Sheet
+S 1550 1550 700  1550
+U 577AF796
+F0 "ps" 60
+F1 "ps.sch" 60
+F2 "5V_LNA" U R 2250 1800 60 
+F3 "RP_5V" U R 2250 1900 60 
+F4 "12V_MINIAMP" U R 2250 2050 60 
+$EndSheet
+$Comp
+L rp_adapter-rescue:GND #PWR01
+U 1 1 577B1466
+P 4950 4300
+F 0 "#PWR01" H 4950 4050 50  0001 C CNN
+F 1 "GND" H 4950 4150 50  0000 C CNN
+F 2 "" H 4950 4300 50  0000 C CNN
+F 3 "" H 4950 4300 50  0000 C CNN
+	1    4950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3850 4950 3850
+Wire Wire Line
+	4950 3850 4950 4300
+Wire Wire Line
+	2250 1900 2700 1900
+Wire Wire Line
+	2700 1900 2700 3000
+Wire Wire Line
+	2700 3000 4750 3000
+Wire Wire Line
+	4750 3000 4750 3700
+Wire Wire Line
+	4750 3700 5350 3700
+Wire Wire Line
+	2250 1800 2700 1800
+Wire Wire Line
+	2700 1800 2700 1500
+Wire Wire Line
+	2700 1500 3150 1500
+Wire Wire Line
+	2250 2050 2550 2050
+Wire Wire Line
+	2550 3600 3100 3600
+$Comp
+L rp_adapter-rescue:GND #PWR02
+U 1 1 577C23B8
+P 2950 1900
+F 0 "#PWR02" H 2950 1650 50  0001 C CNN
+F 1 "GND" H 2950 1750 50  0000 C CNN
+F 2 "" H 2950 1900 50  0000 C CNN
+F 3 "" H 2950 1900 50  0000 C CNN
+	1    2950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1900 2950 1750
+Wire Wire Line
+	2950 1750 3150 1750
+$Sheet
+S 3200 6050 750  1300
+U 5781DF67
+F0 "extern_conn" 60
+F1 "extern_conn.sch" 60
+F2 "DOT" U R 3950 6700 60 
+F3 "DASH" U R 3950 6550 60 
+F4 "PTT_IN" U R 3950 6450 60 
+F5 "RP_3P3V" U R 3950 6200 60 
+F6 "BCLK" O R 3950 6850 60 
+F7 "ADCDAT" O R 3950 6950 60 
+F8 "DACDAT" I R 3950 7050 60 
+F9 "LRCLK" O R 3950 7150 60 
+F10 "SCLK" B L 3200 6600 60 
+F11 "SDAT" B L 3200 6700 60 
+F12 "PTT_OUT" U R 3950 6300 60 
+F13 "ant1" I L 3200 7100 60 
+F14 "ant2" I L 3200 7200 60 
+F15 "ant3" I L 3200 7300 60 
+F16 "preamp" I L 3200 6850 60 
+F17 "h1" I L 3200 6200 60 
+F18 "h2" I L 3200 6300 60 
+F19 "h3" I L 3200 6400 60 
+F20 "h4" I L 3200 6500 60 
+F21 "preamp_n" O R 3950 6100 60 
+F22 "db10" I L 3200 6950 60 
+F23 "db20" I L 3200 7050 60 
+F24 "db10_n" O R 3950 7250 60 
+F25 "db20_n" O R 3950 7300 60 
+F26 "+12V" I L 3200 6100 60 
+$EndSheet
+Wire Wire Line
+	4250 3600 4250 6200
+Wire Wire Line
+	4250 6200 3950 6200
+Wire Wire Line
+	3950 6450 5100 6450
+Wire Wire Line
+	5100 6450 5100 4300
+Wire Wire Line
+	5100 4300 5350 4300
+Wire Wire Line
+	3950 6550 5150 6550
+Wire Wire Line
+	5150 6550 5150 4450
+Wire Wire Line
+	5150 4450 5350 4450
+Wire Wire Line
+	3950 6700 5200 6700
+Wire Wire Line
+	5200 6700 5200 4600
+Wire Wire Line
+	5200 4600 5350 4600
+Entry Wire Line
+	6800 4400 6900 4500
+Entry Wire Line
+	6800 4500 6900 4600
+Entry Wire Line
+	6800 4650 6900 4750
+Entry Wire Line
+	6800 4750 6900 4850
+Wire Wire Line
+	6800 4400 6000 4400
+Wire Wire Line
+	6800 4500 6000 4500
+Wire Wire Line
+	6800 4650 6000 4650
+Wire Wire Line
+	6800 4750 6000 4750
+Text Label 6450 4400 2    60   ~ 0
+BCLK
+Text Label 6450 4650 2    60   ~ 0
+DACDAT
+Text Label 6450 4500 2    60   ~ 0
+ADCDAT
+Text Label 6450 4750 2    60   ~ 0
+LRCLK
+Entry Wire Line
+	4650 4900 4750 4800
+Entry Wire Line
+	4650 5150 4750 5050
+Wire Wire Line
+	5350 4800 4750 4800
+Wire Wire Line
+	5350 5050 4750 5050
+Text Label 5000 4800 2    60   ~ 0
+SCLK
+Text Label 5000 5050 2    60   ~ 0
+SDAT
+Entry Wire Line
+	5450 6850 5550 6750
+Entry Wire Line
+	5450 6950 5550 6850
+Entry Wire Line
+	5450 7050 5550 6950
+Entry Wire Line
+	5450 7150 5550 7050
+Entry Wire Line
+	2650 6500 2750 6600
+Entry Wire Line
+	2650 6600 2750 6700
+Wire Wire Line
+	3200 6600 2750 6600
+Wire Wire Line
+	3200 6700 2750 6700
+Wire Wire Line
+	3950 6850 5450 6850
+Wire Wire Line
+	3950 6950 5450 6950
+Wire Wire Line
+	3950 7050 5450 7050
+Wire Wire Line
+	3950 7150 5450 7150
+Wire Bus Line
+	5550 6000 6900 6000
+Wire Bus Line
+	4650 5450 2650 5450
+Text Label 4900 6850 0    60   ~ 0
+BCLK
+Text Label 4900 6950 0    60   ~ 0
+ADCDAT
+Text Label 4900 7050 0    60   ~ 0
+DACDAT
+Text Label 4900 7150 0    60   ~ 0
+LRCLK
+Text Label 2850 6600 0    60   ~ 0
+SCLK
+Text Label 2850 6700 0    60   ~ 0
+SDAT
+Wire Wire Line
+	3950 6300 4800 6300
+Wire Wire Line
+	4800 6300 4800 5900
+Wire Wire Line
+	4800 5900 6500 5900
+Wire Wire Line
+	6500 5900 6500 4950
+Text Label 6150 4950 0    60   ~ 0
+PTT_OUT
+$Sheet
+S 9500 5450 650  700 
+U 5F81547A
+F0 "I2C to SPI" 60
+F1 "i2c2spi.sch" 60
+F2 "+12V" U L 9500 5500 60 
+F3 "SWR_F" U L 9500 5750 60 
+F4 "SWR_R" U L 9500 5650 60 
+F5 "SCLK" U L 9500 5950 60 
+F6 "SDAT" U L 9500 6050 60 
+F7 "RP_3.3V" U L 9500 5850 60 
+F8 "ant1" O R 10150 5600 60 
+F9 "ant2" O R 10150 5700 60 
+F10 "ant3" O R 10150 5800 60 
+$EndSheet
+Wire Bus Line
+	4650 5450 8550 5450
+Wire Bus Line
+	8550 5450 8550 6050
+Wire Bus Line
+	8550 6050 8850 6050
+Connection ~ 4650 5450
+Entry Wire Line
+	8850 5950 8950 6050
+Entry Wire Line
+	8850 5850 8950 5950
+Wire Wire Line
+	8950 5950 9500 5950
+Wire Wire Line
+	8950 6050 9500 6050
+Wire Wire Line
+	4600 5650 9500 5650
+Wire Wire Line
+	4450 5750 9500 5750
+Text Label 9050 5950 0    60   ~ 0
+SCLK
+Wire Wire Line
+	2550 2050 2550 2750
+Wire Wire Line
+	9500 5500 9300 5500
+Wire Wire Line
+	9300 5500 9300 2750
+Wire Wire Line
+	9300 2750 2550 2750
+Connection ~ 2550 2750
+Wire Wire Line
+	2550 2750 2550 3600
+Wire Wire Line
+	9500 5850 9100 5850
+Wire Wire Line
+	9100 5850 9100 3150
+Wire Wire Line
+	9100 3150 5100 3150
+Wire Wire Line
+	5100 3150 5100 3600
+Connection ~ 5100 3600
+Wire Wire Line
+	5100 3600 5350 3600
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60D9C9E1
+P 5700 1800
+F 0 "H1" H 5800 1846 50  0000 L CNN
+F 1 "MountingHole" H 5800 1755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4" H 5700 1800 50  0001 C CNN
+F 3 "~" H 5700 1800 50  0001 C CNN
+	1    5700 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60D9CDCE
+P 6600 1800
+F 0 "H2" H 6700 1846 50  0000 L CNN
+F 1 "MountingHole" H 6700 1755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4" H 6600 1800 50  0001 C CNN
+F 3 "~" H 6600 1800 50  0001 C CNN
+	1    6600 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 60D9CF73
+P 7550 1800
+F 0 "H3" H 7650 1846 50  0000 L CNN
+F 1 "MountingHole" H 7650 1755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4" H 7550 1800 50  0001 C CNN
+F 3 "~" H 7550 1800 50  0001 C CNN
+	1    7550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 60D9D21B
+P 8750 1750
+F 0 "H4" H 8850 1796 50  0000 L CNN
+F 1 "MountingHole" H 8850 1705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4" H 8750 1750 50  0001 C CNN
+F 3 "~" H 8750 1750 50  0001 C CNN
+	1    8750 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 7300 3050 7300
+Wire Wire Line
+	3050 7300 3050 7500
+Wire Wire Line
+	3050 7500 6100 7500
+Wire Wire Line
+	6100 7500 6100 6450
+Wire Wire Line
+	6100 6450 10600 6450
+Wire Wire Line
+	10600 6450 10600 5800
+Wire Wire Line
+	10600 5800 10150 5800
+Wire Wire Line
+	10150 5700 10500 5700
+Wire Wire Line
+	10500 5700 10500 6400
+Wire Wire Line
+	10500 6400 6050 6400
+Wire Wire Line
+	6050 7600 2950 7600
+Wire Wire Line
+	2950 7600 2950 7200
+Wire Wire Line
+	2950 7200 3200 7200
+Wire Wire Line
+	6050 6400 6050 7600
+Wire Wire Line
+	3200 7100 2900 7100
+Wire Wire Line
+	2900 7100 2900 7650
+Wire Wire Line
+	2900 7650 5950 7650
+Wire Wire Line
+	5950 7650 5950 6350
+Wire Wire Line
+	5950 6350 10450 6350
+Wire Wire Line
+	10450 6350 10450 5600
+Wire Wire Line
+	10450 5600 10150 5600
+Wire Wire Line
+	6000 4300 6000 4200
+Wire Wire Line
+	6000 4300 7100 4300
+Wire Wire Line
+	6000 4200 7100 4200
+Wire Wire Line
+	6000 4100 7100 4100
+Wire Wire Line
+	6000 4000 7100 4000
+Wire Wire Line
+	6000 3900 7100 3900
+Text Label 6150 3900 0    60   ~ 0
+preamp
+Text Label 6150 4000 0    60   ~ 0
+h1
+Text Label 6150 4100 0    60   ~ 0
+h2
+Text Label 6150 4200 0    60   ~ 0
+h3
+Text Label 6150 4300 0    60   ~ 0
+h4
+Entry Bus Bus
+	7100 3900 7200 4000
+Entry Bus Bus
+	7100 3900 7200 4000
+Entry Bus Bus
+	7100 4000 7200 4100
+Entry Bus Bus
+	7100 4000 7200 4100
+Entry Bus Bus
+	7100 4100 7200 4200
+Entry Bus Bus
+	7100 4100 7200 4200
+Entry Bus Bus
+	7100 4200 7200 4300
+Entry Bus Bus
+	7100 4200 7200 4300
+Entry Bus Bus
+	7100 4300 7200 4400
+Entry Bus Bus
+	7100 4300 7200 4400
+Entry Bus Bus
+	2450 6750 2550 6850
+Entry Bus Bus
+	2850 6400 2950 6500
+Entry Bus Bus
+	2850 6300 2950 6400
+Entry Bus Bus
+	2850 6200 2950 6300
+Entry Bus Bus
+	2850 6200 2950 6300
+Entry Bus Bus
+	2850 6100 2950 6200
+Entry Bus Bus
+	2850 6100 2950 6200
+Wire Bus Line
+	2850 6450 2450 6450
+Wire Wire Line
+	2950 6200 3200 6200
+Wire Wire Line
+	2950 6300 3200 6300
+Wire Wire Line
+	2950 6400 3200 6400
+Wire Wire Line
+	2550 6850 3200 6850
+Wire Bus Line
+	7200 5600 2850 5600
+Wire Wire Line
+	2950 6500 3200 6500
+Text Label 3000 6200 0    60   ~ 0
+h1
+Text Label 3000 6300 0    60   ~ 0
+h2
+Text Label 3000 6400 0    60   ~ 0
+h3
+Text Label 3000 6500 0    60   ~ 0
+h4
+Text Label 2700 6850 0    60   ~ 0
+preamp
+Wire Wire Line
+	3950 6100 4350 6100
+Wire Wire Line
+	4350 6100 4350 2050
+Wire Wire Line
+	4350 2050 3900 2050
+Entry Bus Bus
+	7100 3700 7200 3800
+Entry Bus Bus
+	7100 3700 7200 3800
+Entry Bus Bus
+	7100 3500 7200 3600
+Wire Wire Line
+	6000 3500 7100 3500
+Wire Wire Line
+	6000 3700 7100 3700
+Text Label 6200 3500 0    60   ~ 0
+db20
+Text Label 6200 3700 0    60   ~ 0
+db10
+Entry Bus Bus
+	2450 6850 2550 6950
+Entry Bus Bus
+	2450 6850 2550 6950
+Entry Bus Bus
+	2450 6950 2550 7050
+Wire Wire Line
+	3200 6950 3200 7050
+Wire Wire Line
+	2550 6950 3200 6950
+Wire Wire Line
+	2550 7050 3200 7050
+Text Label 2900 6950 2    60   ~ 0
+db10
+Text Label 2900 7050 2    60   ~ 0
+db20
+Wire Wire Line
+	3950 7250 4200 7250
+Wire Wire Line
+	4200 7250 4200 1600
+Wire Wire Line
+	4200 1600 3900 1600
+Wire Wire Line
+	3950 7300 4150 7300
+Wire Wire Line
+	4150 7300 4150 1900
+Wire Wire Line
+	4150 1900 3900 1900
+$Sheet
+S 5350 3450 650  1700
+U 5777B162
+F0 "rp_conn" 60
+F1 "rp_conn.sch" 60
+F2 "RP_3.3V" U L 5350 3600 60 
+F3 "RP_5V" U L 5350 3700 60 
+F4 "PTT_OUT" O R 6000 4950 60 
+F5 "PTT_IN" I L 5350 4300 60 
+F6 "DASH" I L 5350 4450 60 
+F7 "DOT" I L 5350 4600 60 
+F8 "SWR_F" U L 5350 4000 60 
+F9 "SWR_R" U L 5350 4100 60 
+F10 "GND_CONN" U L 5350 3850 60 
+F11 "BCLK" I R 6000 4400 60 
+F12 "ADCDAT" I R 6000 4500 60 
+F13 "DACDAT" O R 6000 4650 60 
+F14 "LRCLK" I R 6000 4750 60 
+F15 "SCLK" B L 5350 4800 60 
+F16 "SDAT" B L 5350 5050 60 
+F17 "db10" O R 6000 3700 60 
+F18 "preamp" O R 6000 3900 60 
+F19 "db20" O R 6000 3500 60 
+F20 "h1" O R 6000 4000 60 
+F21 "h2" O R 6000 4100 60 
+F22 "h3" O R 6000 4200 60 
+F23 "h4" O R 6000 4300 60 
+$EndSheet
+Wire Wire Line
+	2550 3600 2550 6100
+Connection ~ 2550 3600
+Wire Bus Line
+	8850 5850 8850 6050
+Wire Bus Line
+	2650 5450 2650 6600
+Wire Bus Line
+	4650 4900 4650 5450
+Wire Wire Line
+	2550 6100 3200 6100
+Wire Bus Line
+	2450 6450 2450 6950
+Wire Bus Line
+	5550 6000 5550 7050
+Wire Bus Line
+	6900 4500 6900 6000
+Wire Bus Line
+	7200 3600 7200 5600
+Wire Bus Line
+	2850 5600 2850 6450
+Text Label 9100 6050 0    60   ~ 0
+SDAT
+$EndSCHEMATC
